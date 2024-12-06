@@ -50,8 +50,7 @@
   </style>
 </head>
 <body>
-  <h1>Welcome to the Product Store</h1>
-  <button onclick="showProductDetails()">View Product Details</button>
+  <button id="view-product-button" onclick="showProductDetails()">View Product Details</button>
 
   <div id="product-details">
     <img id="product-image" src="" alt="Product Image">
@@ -63,6 +62,9 @@
 
   <script>
     function showProductDetails() {
+      // Hide the button
+      document.getElementById("view-product-button").style.display = "none";
+
       // Mock product data
       const product = {
         image: "https://images-cdn.ubuy.co.in/633b12488d2edc65997f4c20-smart-watch-bluetooth-smartwatch-touch.jpg",
